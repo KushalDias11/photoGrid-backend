@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-regenerator",
+    "@babel/plugin-transform-runtime",
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "@exasave": "./src/v1/services",
+        "test": "./test",
+        "underscore": "lodash"
+      }
+    }]
+  ],
+  "env": {
+    "test": {
+      "presets": ["@babel/env"],
+      
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "grid-assessment",
+  "version": "1.0.0",
+  "description": "Generate photo grids for users",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js",
+    "test": "jest",
+    "scss": "node-sass"
+  },
+  "author": "Kushal Dias",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "async": "^3.1.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "app-root-path": "^3.0.0",
+    "axios": "^0.19.2",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validation": "^1.0.3",
+    "express-validator": "^6.3.1",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.2",
+    "swagger-ui-express": "^4.1.3",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.4.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}

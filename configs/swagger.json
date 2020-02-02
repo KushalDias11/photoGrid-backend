@@ -1,0 +1,161 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "GRID Genartion service",
+    "description": "Create pgoto grids fro users photo library",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3001",
+  "basePath": "/api/v1/",
+  "tags": [
+    {
+      "name": "User Grids",
+      "description": "API for user grids in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/myGrid": {
+      "post": {
+        "tags": [
+          "User Grids"
+        ],
+        "description": "Create new grid in system",
+        "parameters": [
+          {
+            "name": "User Grids",
+            "in": "body",
+            "description": "Grid that we want to create",
+            "schema": {
+              "type": "object",
+              "required": [
+                "user_id",
+                "grid_pictures"
+              ],
+              "properties": {
+                "user_id": {
+                  "type": "string",
+                  "uniqueItems": true
+                },
+                "grid_pictures": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New grid is created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "uniqueItems": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update grid with give ID",
+        "tags": [
+          "User Grids"
+        ],
+        "parameters": [
+          {
+            "name": "grid",
+            "in": "body",
+            "description": "Grid with new values of properties",
+            "schema": {
+              "type": "object",
+              "required": [
+                "user_id",
+                "grid_pictures"
+              ],
+              "properties": {
+                "user_id": {
+                  "type": "string",
+                  "uniqueItems": true
+                },
+                "grid_pictures": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "New grid is created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "uniqueItems": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/myGrid/{uid}": {
+      "parameters": [
+        {
+          "name": "uid",
+          "in": "path",
+          "required": true,
+          "description": "ID of user that you want to find grid",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "User Grids"
+        ],
+        "summary": "Get grid with given ID",
+        "responses": {
+          "200": {
+            "description": "grid is found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User Gridss": {
+      "required": [
+        "user_id",
+        "grid_pictures"
+      ],
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "grid_pictures": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
