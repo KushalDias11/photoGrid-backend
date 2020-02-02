@@ -13,5 +13,9 @@ Generate Grid for user photos
     ```
     nodemon index.js or npm start
     ```
+6. To view swagger documentation visit
+    ```
+    http://localhost:3001/api-docs/
+    ```
 
 
