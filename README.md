@@ -2,8 +2,8 @@
 Generate Grid for user photos
 
 ### Setup
-1. Clone the repositiry from `https://github.com/upsales/upsales-crm-pdf-service.git`.
-2. Checkout to `upsales-crm-pdf-service`
+1. Clone the repositiry from `https://github.com/KushalDias11/photoGrid-backend.git`.
+2. Checkout to `photoGrid-backend`
 3. To install dependencies run the following command.
    ```
    npm install
